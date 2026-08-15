@@ -1,0 +1,35 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "id": "WORLDSTATE-NO-CAMERA",
+      "pass": true,
+      "detail": "WorldState has no camera pose/fov keys."
+    },
+    {
+      "id": "ONE-CAMERA-WRITER",
+      "pass": true,
+      "detail": "1 writes in latest frame; 0 violations."
+    },
+    {
+      "id": "VISITOR-PROJECTS-WORLDSTATE",
+      "pass": true,
+      "detail": "VisitorState projection matches WorldState."
+    },
+    {
+      "id": "PROXIMITY-FROM-VISITOR",
+      "pass": true,
+      "detail": "nearest=hotspot.artwork.b-01"
+    },
+    {
+      "id": "SEMANTIC-ACTION-ARMED",
+      "pass": true,
+      "detail": "armed=FOCUS_ENTITY"
+    },
+    {
+      "id": "SEMANTIC-ACTION-DISPATCHED",
+      "pass": true,
+      "detail": "actions=2"
+    }
+  ]
+}

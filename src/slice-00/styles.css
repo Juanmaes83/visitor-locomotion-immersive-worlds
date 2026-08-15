@@ -1,0 +1,143 @@
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  background: #101816;
+  color: #ecf4ee;
+  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+}
+
+.shell {
+  position: relative;
+  height: 100%;
+  overflow: hidden;
+}
+
+#slice-canvas {
+  display: block;
+  width: 100vw;
+  height: 100vh;
+  background: #15211f;
+  touch-action: none;
+}
+
+.diagnostics {
+  position: absolute;
+  top: 18px;
+  right: 18px;
+  width: min(380px, calc(100vw - 36px));
+  max-height: calc(100vh - 36px);
+  overflow: auto;
+  padding: 14px;
+  border: 1px solid rgba(210, 232, 220, 0.28);
+  border-radius: 8px;
+  background: rgba(14, 22, 20, 0.88);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 70px rgba(0, 0, 0, 0.35);
+}
+
+.diagnostics header {
+  margin-bottom: 10px;
+}
+
+.diagnostics p,
+.diagnostics h1 {
+  margin: 0;
+}
+
+.diagnostics header p {
+  color: #ffcf5a;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0;
+}
+
+.diagnostics h1 {
+  font-size: 20px;
+  line-height: 1.15;
+}
+
+dl {
+  display: grid;
+  grid-template-columns: 138px minmax(0, 1fr);
+  gap: 6px 10px;
+  margin: 0;
+  font-size: 12px;
+}
+
+dt {
+  color: #9eb7ad;
+}
+
+dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: #f6efe4;
+}
+
+.invariants {
+  display: grid;
+  gap: 5px;
+  margin-top: 12px;
+}
+
+.invariants p {
+  margin: 0;
+  padding: 6px 8px;
+  border-radius: 5px;
+  font-size: 11px;
+  font-weight: 800;
+}
+
+.invariants .pass {
+  background: rgba(70, 173, 116, 0.25);
+  color: #b8f4cf;
+}
+
+.invariants .fail {
+  background: rgba(220, 75, 75, 0.25);
+  color: #ffd1d1;
+}
+
+.controls {
+  position: absolute;
+  left: 18px;
+  bottom: 18px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  max-width: calc(100vw - 36px);
+}
+
+.controls span {
+  padding: 7px 9px;
+  border: 1px solid rgba(210, 232, 220, 0.26);
+  border-radius: 6px;
+  background: rgba(14, 22, 20, 0.78);
+  color: #d6e5dd;
+  font-size: 12px;
+}
+
+@media (max-width: 720px) {
+  .diagnostics {
+    left: 12px;
+    right: 12px;
+    top: 12px;
+    width: auto;
+    max-height: 44vh;
+  }
+
+  dl {
+    grid-template-columns: 122px minmax(0, 1fr);
+  }
+
+  .controls {
+    left: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+}

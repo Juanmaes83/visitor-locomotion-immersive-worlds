@@ -1,0 +1,499 @@
+{
+  "tool": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "browser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "appUrl": "http://127.0.0.1:4173",
+  "desktop": {
+    "mission": "SLICE-00-ARCHITECTURE-HARNESS",
+    "updateOrder": [
+      "input.beginFrame",
+      "runtime.fixedUpdate",
+      "worldState.update",
+      "visitorRuntime.update",
+      "proximity.update",
+      "cameraAuthority.update",
+      "telemetry.sample",
+      "renderer.render",
+      "input.endFrame"
+    ],
+    "averageFps": 60,
+    "averageFrameMs": 16.67,
+    "fixedStepCount": 306,
+    "errorCount": 0,
+    "latest": {
+      "frame": 306,
+      "fps": 60,
+      "frameMs": 16.6,
+      "fixedSteps": 1,
+      "cameraOwner": "EXPLORE_THIRD_PERSON",
+      "cameraWrites": 1,
+      "visitor": {
+        "position": {
+          "x": 8.35,
+          "y": 0,
+          "z": -1.75
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "yaw": 1.5707963267948966,
+        "grounded": true,
+        "locomotionMode": "idle",
+        "currentSpaceId": "gallery-b",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "nearestHotspotId": "hotspot.artwork.b-01"
+      },
+      "world": {
+        "activeSpaceId": "gallery-b",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "revision": 6
+      },
+      "proximity": {
+        "nearestHotspotId": "hotspot.artwork.b-01",
+        "candidates": 1,
+        "states": {
+          "hotspot.artwork.a-01": "AVAILABLE",
+          "hotspot.artwork.a-02": "AVAILABLE",
+          "hotspot.artwork.b-01": "ACTIVE"
+        }
+      },
+      "actions": {
+        "total": 2,
+        "lastAction": {
+          "type": "RELEASE_FOCUS",
+          "target": null,
+          "source": "INPUT",
+          "sourceId": null,
+          "frame": 285
+        },
+        "recent": [
+          {
+            "type": "FOCUS_ENTITY",
+            "target": "artwork.b-01",
+            "source": "HOTSPOT",
+            "sourceId": "hotspot.artwork.b-01",
+            "frame": 265
+          },
+          {
+            "type": "RELEASE_FOCUS",
+            "target": null,
+            "source": "INPUT",
+            "sourceId": null,
+            "frame": 285
+          }
+        ]
+      },
+      "invariants": {
+        "ok": true,
+        "checks": [
+          {
+            "id": "WORLDSTATE-NO-CAMERA",
+            "pass": true,
+            "detail": "WorldState has no camera pose/fov keys."
+          },
+          {
+            "id": "ONE-CAMERA-WRITER",
+            "pass": true,
+            "detail": "1 writes in latest frame; 0 violations."
+          },
+          {
+            "id": "VISITOR-PROJECTS-WORLDSTATE",
+            "pass": true,
+            "detail": "VisitorState projection matches WorldState."
+          },
+          {
+            "id": "PROXIMITY-FROM-VISITOR",
+            "pass": true,
+            "detail": "nearest=hotspot.artwork.b-01"
+          },
+          {
+            "id": "SEMANTIC-ACTION-ARMED",
+            "pass": true,
+            "detail": "armed=FOCUS_ENTITY"
+          },
+          {
+            "id": "SEMANTIC-ACTION-DISPATCHED",
+            "pass": true,
+            "detail": "actions=2"
+          }
+        ]
+      }
+    },
+    "camera": {
+      "owner": "EXPLORE_THIRD_PERSON",
+      "frame": 306,
+      "writesThisFrame": 1,
+      "violations": 0,
+      "recentViolations": [],
+      "history": [],
+      "pose": {
+        "position": {
+          "x": 3.4499999999999993,
+          "y": 3.2,
+          "z": -1.7500000000000002
+        },
+        "target": {
+          "x": 8.35,
+          "y": 1.15,
+          "z": -1.75
+        },
+        "yaw": 1.5707963267948966,
+        "pitch": -0.35,
+        "fov": 54
+      }
+    },
+    "invariants": {
+      "ok": true,
+      "checks": [
+        {
+          "id": "WORLDSTATE-NO-CAMERA",
+          "pass": true,
+          "detail": "WorldState has no camera pose/fov keys."
+        },
+        {
+          "id": "ONE-CAMERA-WRITER",
+          "pass": true,
+          "detail": "1 writes in latest frame; 0 violations."
+        },
+        {
+          "id": "VISITOR-PROJECTS-WORLDSTATE",
+          "pass": true,
+          "detail": "VisitorState projection matches WorldState."
+        },
+        {
+          "id": "PROXIMITY-FROM-VISITOR",
+          "pass": true,
+          "detail": "nearest=hotspot.artwork.b-01"
+        },
+        {
+          "id": "SEMANTIC-ACTION-ARMED",
+          "pass": true,
+          "detail": "armed=FOCUS_ENTITY"
+        },
+        {
+          "id": "SEMANTIC-ACTION-DISPATCHED",
+          "pass": true,
+          "detail": "actions=2"
+        }
+      ]
+    },
+    "ownership": [
+      {
+        "mutableState": "visitor position",
+        "owner": "VisitorRuntime",
+        "readers": "Camera, Proximity, Renderer, Telemetry",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "visitor velocity",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "grounded",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "locomotionMode",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "camera transform",
+        "owner": "CameraAuthority",
+        "readers": "Renderer, Telemetry",
+        "writers": "active camera controller via token",
+        "sourceOfTruth": "CameraAuthority"
+      },
+      {
+        "mutableState": "camera authority",
+        "owner": "CameraAuthority",
+        "readers": "Diagnostics, Telemetry",
+        "writers": "CameraAuthority.request/register",
+        "sourceOfTruth": "CameraAuthority"
+      },
+      {
+        "mutableState": "activeSpaceId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Proximity, Diagnostics",
+        "writers": "WorldState.setActiveSpace",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "focusedEntityId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "ActionDispatch",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "activeRouteId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "none in Slice 0",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "activeStepId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "none in Slice 0",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "nearestHotspotId",
+        "owner": "ProximitySystem",
+        "readers": "VisitorState, Diagnostics, ActionDispatch",
+        "writers": "ProximitySystem",
+        "sourceOfTruth": "ProximitySystem"
+      }
+    ]
+  },
+  "mobile": {
+    "mission": "SLICE-00-ARCHITECTURE-HARNESS",
+    "updateOrder": [
+      "input.beginFrame",
+      "runtime.fixedUpdate",
+      "worldState.update",
+      "visitorRuntime.update",
+      "proximity.update",
+      "cameraAuthority.update",
+      "telemetry.sample",
+      "renderer.render",
+      "input.endFrame"
+    ],
+    "averageFps": 61,
+    "averageFrameMs": 16.41,
+    "fixedStepCount": 29,
+    "errorCount": 0,
+    "latest": {
+      "frame": 30,
+      "fps": 60,
+      "frameMs": 16.6,
+      "fixedSteps": 1,
+      "cameraOwner": "EXPLORE_THIRD_PERSON",
+      "cameraWrites": 1,
+      "visitor": {
+        "position": {
+          "x": -3.8,
+          "y": 0,
+          "z": 0.8
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "yaw": 1.5707963267948966,
+        "grounded": true,
+        "locomotionMode": "idle",
+        "currentSpaceId": "gallery-a",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "nearestHotspotId": null
+      },
+      "world": {
+        "activeSpaceId": "gallery-a",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "revision": 0
+      },
+      "proximity": {
+        "nearestHotspotId": null,
+        "candidates": 2,
+        "states": {
+          "hotspot.artwork.a-01": "AVAILABLE",
+          "hotspot.artwork.a-02": "AVAILABLE",
+          "hotspot.artwork.b-01": "AVAILABLE"
+        }
+      },
+      "actions": {
+        "total": 0,
+        "lastAction": null,
+        "recent": []
+      },
+      "invariants": {
+        "ok": true,
+        "checks": [
+          {
+            "id": "WORLDSTATE-NO-CAMERA",
+            "pass": true,
+            "detail": "WorldState has no camera pose/fov keys."
+          },
+          {
+            "id": "ONE-CAMERA-WRITER",
+            "pass": true,
+            "detail": "1 writes in latest frame; 0 violations."
+          },
+          {
+            "id": "VISITOR-PROJECTS-WORLDSTATE",
+            "pass": true,
+            "detail": "VisitorState projection matches WorldState."
+          },
+          {
+            "id": "PROXIMITY-FROM-VISITOR",
+            "pass": true,
+            "detail": "nearest=null"
+          },
+          {
+            "id": "SEMANTIC-ACTION-ARMED",
+            "pass": true,
+            "detail": "armed=none"
+          }
+        ]
+      }
+    },
+    "camera": {
+      "owner": "EXPLORE_THIRD_PERSON",
+      "frame": 30,
+      "writesThisFrame": 1,
+      "violations": 0,
+      "recentViolations": [],
+      "history": [],
+      "pose": {
+        "position": {
+          "x": -8.7,
+          "y": 3.2,
+          "z": 0.7999999999999997
+        },
+        "target": {
+          "x": -3.8,
+          "y": 1.15,
+          "z": 0.8
+        },
+        "yaw": 1.5707963267948966,
+        "pitch": -0.35,
+        "fov": 54
+      }
+    },
+    "invariants": {
+      "ok": true,
+      "checks": [
+        {
+          "id": "WORLDSTATE-NO-CAMERA",
+          "pass": true,
+          "detail": "WorldState has no camera pose/fov keys."
+        },
+        {
+          "id": "ONE-CAMERA-WRITER",
+          "pass": true,
+          "detail": "1 writes in latest frame; 0 violations."
+        },
+        {
+          "id": "VISITOR-PROJECTS-WORLDSTATE",
+          "pass": true,
+          "detail": "VisitorState projection matches WorldState."
+        },
+        {
+          "id": "PROXIMITY-FROM-VISITOR",
+          "pass": true,
+          "detail": "nearest=null"
+        },
+        {
+          "id": "SEMANTIC-ACTION-ARMED",
+          "pass": true,
+          "detail": "armed=none"
+        }
+      ]
+    },
+    "ownership": [
+      {
+        "mutableState": "visitor position",
+        "owner": "VisitorRuntime",
+        "readers": "Camera, Proximity, Renderer, Telemetry",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "visitor velocity",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "grounded",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "locomotionMode",
+        "owner": "VisitorRuntime",
+        "readers": "Telemetry, Diagnostics",
+        "writers": "VisitorRuntime",
+        "sourceOfTruth": "VisitorRuntime"
+      },
+      {
+        "mutableState": "camera transform",
+        "owner": "CameraAuthority",
+        "readers": "Renderer, Telemetry",
+        "writers": "active camera controller via token",
+        "sourceOfTruth": "CameraAuthority"
+      },
+      {
+        "mutableState": "camera authority",
+        "owner": "CameraAuthority",
+        "readers": "Diagnostics, Telemetry",
+        "writers": "CameraAuthority.request/register",
+        "sourceOfTruth": "CameraAuthority"
+      },
+      {
+        "mutableState": "activeSpaceId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Proximity, Diagnostics",
+        "writers": "WorldState.setActiveSpace",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "focusedEntityId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "ActionDispatch",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "activeRouteId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "none in Slice 0",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "activeStepId",
+        "owner": "WorldState",
+        "readers": "VisitorState, Diagnostics",
+        "writers": "none in Slice 0",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "nearestHotspotId",
+        "owner": "ProximitySystem",
+        "readers": "VisitorState, Diagnostics, ActionDispatch",
+        "writers": "ProximitySystem",
+        "sourceOfTruth": "ProximitySystem"
+      }
+    ]
+  },
+  "video": {
+    "frames": 57,
+    "encoded": true
+  },
+  "consoleErrors": []
+}

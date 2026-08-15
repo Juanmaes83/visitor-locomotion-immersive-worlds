@@ -1,0 +1,7 @@
+{
+  "status": "NOT AVAILABLE",
+  "installRequired": true,
+  "projectDependency": false,
+  "temporaryLocalTool": false,
+  "reason": "Cannot find package 'playwright' imported from C:\\Users\\temp123\\.codex\\visualizations\\2026\\08\\15\\01a00738-9d74-7ab0-aed7-17d82d5e95cb\\visitor-locomotion-immersive-worlds\\scripts\\qa-slice-00.mjs"
+}

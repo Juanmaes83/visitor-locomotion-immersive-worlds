@@ -1,0 +1,13 @@
+{
+  "name": "visitor-locomotion-immersive-worlds",
+  "version": "0.0.0-slice-00",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "node scripts/verify-slice-00.mjs",
+    "test": "node scripts/verify-slice-00.mjs",
+    "qa:slice-00": "node scripts/qa-slice-00.mjs",
+    "qa:browser": "node scripts/browser-qa-slice-00.mjs",
+    "start": "node scripts/serve-slice-00.mjs"
+  }
+}

@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Slice 00 Architecture Harness</title>
+    <link rel="stylesheet" href="./src/slice-00/styles.css">
+  </head>
+  <body>
+    <main class="shell">
+      <canvas id="slice-canvas" aria-label="Slice 00 gallery architecture harness"></canvas>
+      <aside class="diagnostics" aria-label="Runtime diagnostics">
+        <header>
+          <p>SLICE-00</p>
+          <h1>Architecture Harness</h1>
+        </header>
+        <dl id="diagnostics-panel"></dl>
+        <div class="invariants" id="invariants-panel"></div>
+      </aside>
+      <section class="controls" aria-label="Controls">
+        <span>WASD / arrows move</span>
+        <span>Mouse drag looks</span>
+        <span>E / Enter activate</span>
+        <span>Esc release focus request</span>
+      </section>
+    </main>
+    <script type="module" src="./src/slice-00/main.js"></script>
+  </body>
+</html>
