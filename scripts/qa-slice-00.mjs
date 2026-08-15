@@ -1,15 +1,36 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
+import { pathToFileURL } from 'node:url';
 
 const ROOT = process.cwd();
 const OUT = path.join(ROOT, 'docs/evidence/SLICE-00-ARCHITECTURE-HARNESS');
 const PORT = Number(process.env.SLICE00_PORT || 4173);
 const BASE = `http://127.0.0.1:${PORT}`;
 
+async function loadPlaywright() {
+  try {
+    return { module: await import('playwright'), source: 'project-or-node-resolution' };
+  } catch (error) {
+    if (!process.env.PLAYWRIGHT_MODULE_PATH) {
+      throw error;
+    }
+
+    const stats = await fs.stat(process.env.PLAYWRIGHT_MODULE_PATH);
+    const modulePath = stats.isDirectory()
+      ? path.join(process.env.PLAYWRIGHT_MODULE_PATH, 'index.mjs')
+      : process.env.PLAYWRIGHT_MODULE_PATH;
+
+    return { module: await import(pathToFileURL(modulePath).href), source: modulePath };
+  }
+}
+
 async function main() {
   let chromium;
+  let playwrightSource = null;
   try {
-    ({ chromium } = await import('playwright'));
+    const loaded = await loadPlaywright();
+    ({ chromium } = loaded.module);
+    playwrightSource = loaded.source;
   } catch (error) {
     await fs.mkdir(path.join(OUT, 'diagnostics'), { recursive: true });
     await fs.writeFile(
@@ -35,6 +56,7 @@ async function main() {
 
   await fs.mkdir(path.join(OUT, 'screenshots'), { recursive: true });
   await fs.mkdir(path.join(OUT, 'diagnostics'), { recursive: true });
+  await fs.mkdir(path.join(OUT, 'video'), { recursive: true });
   await page.goto(BASE, { waitUntil: 'load' });
   await page.waitForFunction(() => document.documentElement.dataset.slice00Ready === 'true');
   await page.waitForTimeout(250);
@@ -67,6 +89,19 @@ async function main() {
   const report = await page.evaluate(() => window.__SLICE00.report());
   await fs.writeFile(path.join(OUT, 'diagnostics', 'runtime-report.json'), `${JSON.stringify({ consoleErrors, report }, null, 2)}\n`);
   await fs.writeFile(path.join(OUT, 'diagnostics', 'invariant-report.json'), `${JSON.stringify(report.invariants, null, 2)}\n`);
+  await fs.writeFile(
+    path.join(OUT, 'diagnostics', 'playwright-status.json'),
+    `${JSON.stringify({
+      status: 'PASS',
+      installRequired: false,
+      projectDependency: false,
+      temporaryLocalTool: true,
+      source: playwrightSource,
+      consoleErrors,
+      averageFps: report.averageFps,
+      invariantsOk: report.invariants.ok
+    }, null, 2)}\n`
+  );
 
   const mobile = await browser.newPage({ viewport: { width: 390, height: 844 } });
   await mobile.goto(BASE, { waitUntil: 'load' });
@@ -75,8 +110,13 @@ async function main() {
   await mobile.screenshot({ path: path.join(OUT, 'screenshots', '08-mobile-viewport.png') });
   await mobile.close();
 
+  const recordedVideo = page.video();
   await page.close();
   await context.close();
+  if (recordedVideo) {
+    const recordedVideoPath = await recordedVideo.path();
+    await fs.copyFile(recordedVideoPath, path.join(OUT, 'video', 'slice-00-playwright-demo.webm'));
+  }
   await browser.close();
   console.log(JSON.stringify({ ok: report.invariants.ok && consoleErrors.length === 0, consoleErrors, averageFps: report.averageFps }, null, 2));
 }

@@ -28,7 +28,7 @@ Local URL while server is active: `http://127.0.0.1:4173`
 - Storyboard: `storyboard/DEMO_STORYBOARD.md`
 - Contact sheet: `storyboard/storyboard-contact-sheet.png`
 - Screenshots: `screenshots/`
-- Video: `video/slice-00-primary-demo.webm`
+- Video: `video/slice-00-primary-demo.webm`, `video/slice-00-playwright-demo.webm`
 - Diagnostics: `diagnostics/runtime-report.json`, `diagnostics/invariant-report.json`
 - Critic: `critic/CRITIC_INPUT.md`, `critic/CRITIC_VERDICT.md`
 
@@ -36,5 +36,5 @@ Local URL while server is active: `http://127.0.0.1:4173`
 
 - The visual sandbox is deliberately schematic and 2D/canvas-based for Slice 0 clarity. It is not final Museum rendering.
 - No final locomotion feel, jump, crouch, sprint, avatar animation, footprints, footstep audio, camera collision, Focus camera, Guided mode, Museum integration, Rapier, or navmesh.
-- Playwright package was not available without installation; browser evidence was captured with installed Microsoft Edge through Chrome DevTools Protocol.
+- Playwright is not a project dependency. After explicit tool permission, the QA script was rerun using an external local Playwright package and recorded PASS in `diagnostics/playwright-status.json`.
 - Edge's temporary browser profile is ignored and not part of the published evidence package.

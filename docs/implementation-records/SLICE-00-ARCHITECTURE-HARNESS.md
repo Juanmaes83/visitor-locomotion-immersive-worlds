@@ -128,12 +128,12 @@ Runtime/build changes:
 - WHERE / WHEN: `npm.cmd run qa:slice-00`.
 - CLASSIFICATION: INSTRUMENT BUG
 - ROOT CAUSE: known; repo has no Playwright dependency and no local package.
-- ATTEMPTS MADE: recorded `playwright-status.json`; did not install.
-- WHAT FAILED: Playwright automation path.
-- WHAT WORKED: installed Microsoft Edge controlled directly through CDP.
-- FINAL FIX / CURRENT MITIGATION: `browser-qa-slice-00.mjs` uses Edge CDP without project dependency.
-- REGRESSION CHECK: `npm.cmd run qa:browser` passes.
-- REUSABLE LEARNING: CDP can provide dependency-free browser evidence when Playwright is not approved.
+- ATTEMPTS MADE: recorded `playwright-status.json`; did not install. After explicit user permission, added `PLAYWRIGHT_MODULE_PATH` fallback and reran the harness using an existing local Playwright package outside this repo.
+- WHAT FAILED: initial bare package import.
+- WHAT WORKED: installed Microsoft Edge controlled directly through CDP; external local Playwright package loaded through explicit environment path.
+- FINAL FIX / CURRENT MITIGATION: `browser-qa-slice-00.mjs` uses Edge CDP without project dependency; `qa-slice-00.mjs` can use an external Playwright tool path without adding dependencies.
+- REGRESSION CHECK: `npm.cmd run qa:browser` passes; external Playwright harness passes with invariants OK and zero console errors.
+- REUSABLE LEARNING: CDP can provide dependency-free browser evidence when Playwright is not approved; `PLAYWRIGHT_MODULE_PATH` can verify with local tooling without contaminating project dependencies.
 
 ### Problem 4
 
@@ -212,7 +212,7 @@ Runtime/build changes:
 - Screenshots: `docs/evidence/SLICE-00-ARCHITECTURE-HARNESS/screenshots/`.
 - Video: `docs/evidence/SLICE-00-ARCHITECTURE-HARNESS/video/slice-00-primary-demo.webm`.
 - Before/after: N/A; first executable slice.
-- Missing evidence + reason: Playwright trace absent because Playwright was not available without installation.
+- Missing evidence + reason: Playwright trace absent because Slice 0 records screenshots/video/status JSON rather than trace packaging; Playwright browser automation itself now passes through an external local tool.
 
 ## G. Critic
 
@@ -247,6 +247,7 @@ Runtime/build changes:
 - npm PowerShell shim issue: PROJECT-SPECIFIC LEARNING.
 - DOM-free core modules for testability: VISITOR-ENGINE REUSABLE LEARNING.
 - CDP browser QA fallback when Playwright unavailable: VISITOR-ENGINE REUSABLE LEARNING; PLAYBOOK PROMOTION CANDIDATE.
+- External local Playwright fallback through `PLAYWRIGHT_MODULE_PATH`: VISITOR-ENGINE REUSABLE LEARNING; useful when Playwright exists on the workstation but must not become a repo dependency.
 - Page target vs browser target for CDP: LOCAL IMPLEMENTATION DETAIL.
 - Armed vs dispatched invariant distinction: IMMERSIVE-WORLDS REUSABLE LEARNING; PLAYBOOK PROMOTION CANDIDATE.
 - Critic ADJUST re-loop response: GENERIC PLAYBOOK CANDIDATE.

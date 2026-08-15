@@ -53,7 +53,7 @@
 - Schematic 2D/canvas visualization, not final Museum 3D rendering.
 - No final movement feel, avatar, animation, footprints, audio, camera collision, Focus camera, Guided route, Museum integration, Rapier, or navmesh.
 - Mobile viewport was checked in Edge emulation only; no physical-device claim.
-- Playwright package was not installed/available; Edge CDP was used for browser evidence.
+- Playwright is not installed as a project dependency. After explicit permission, `scripts/qa-slice-00.mjs` was rerun with an external local Playwright package and now records PASS in `diagnostics/playwright-status.json`.
 - Edge temporary profile and screencast frames are ignored and not part of the published review package.
 
 ## Evidence index

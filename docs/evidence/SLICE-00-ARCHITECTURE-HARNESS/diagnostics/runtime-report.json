@@ -17,10 +17,10 @@
     ],
     "averageFps": 60,
     "averageFrameMs": 16.67,
-    "fixedStepCount": 306,
+    "fixedStepCount": 299,
     "errorCount": 0,
     "latest": {
-      "frame": 306,
+      "frame": 300,
       "fps": 60,
       "frameMs": 16.6,
       "fixedSteps": 1,
@@ -69,7 +69,7 @@
           "target": null,
           "source": "INPUT",
           "sourceId": null,
-          "frame": 285
+          "frame": 281
         },
         "recent": [
           {
@@ -77,14 +77,14 @@
             "target": "artwork.b-01",
             "source": "HOTSPOT",
             "sourceId": "hotspot.artwork.b-01",
-            "frame": 265
+            "frame": 261
           },
           {
             "type": "RELEASE_FOCUS",
             "target": null,
             "source": "INPUT",
             "sourceId": null,
-            "frame": 285
+            "frame": 281
           }
         ]
       },
@@ -126,7 +126,7 @@
     },
     "camera": {
       "owner": "EXPLORE_THIRD_PERSON",
-      "frame": 306,
+      "frame": 300,
       "writesThisFrame": 1,
       "violations": 0,
       "recentViolations": [],
@@ -276,7 +276,7 @@
       "input.endFrame"
     ],
     "averageFps": 61,
-    "averageFrameMs": 16.41,
+    "averageFrameMs": 16.32,
     "fixedStepCount": 29,
     "errorCount": 0,
     "latest": {
