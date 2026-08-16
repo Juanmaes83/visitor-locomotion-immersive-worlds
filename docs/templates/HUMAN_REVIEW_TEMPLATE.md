@@ -1,41 +1,95 @@
 # <MISSION-ID> — HUMAN REVIEW
 
-## Identity
+## BUILD
 
 - Mission:
 - Branch:
-- SHA:
-- Runtime URL / local launch command:
+- Commit SHA:
+- Access: PINNED / MOVING / LOCAL
 
-## What changed
+## OPEN
 
+- Visitor Runtime:
+- Diagnostics:
+- Contact Sheet:
+- Primary Video:
+- Other relevant surface:
+
+## REVIEW 1 — <CHANGED VERTICAL>
+
+### CHANGE
 - 
 
-## What Juanma should test
+### OPEN
+- 
 
+### GO TO
+- 
+
+### DO
 1. 
 2. 
 3. 
 
-## Controls
-
+### LOOK FOR
 - 
 
-## Recommended demo path
+### MUST NOT CHANGE
+- 
 
+### KNOWN LIMITATION
+- 
+
+### RETURN
+- KEEP / ADJUST / REJECT
+- If ADJUST / REJECT: what feels or looks wrong, and where?
+
+## REVIEW 2 — <OPTIONAL CHANGED VERTICAL>
+
+### CHANGE
+- 
+
+### OPEN
+- 
+
+### GO TO
+- 
+
+### DO
 1. 
 2. 
-3. 
 
-## Expected behavior
+### LOOK FOR
+- 
+
+### MUST NOT CHANGE
+- 
+
+### KNOWN LIMITATION
+- 
+
+### RETURN
+- KEEP / ADJUST / REJECT
+
+## CONTAINING-SURFACE REGRESSION GLANCE
+
+After the targeted change, briefly inspect:
+
+- first-glance integrity;
+- controls;
+- movement / camera continuity when relevant;
+- protected baseline behaviours;
+- obvious collateral regression.
+
+## KNOWN ISSUES
 
 - 
 
-## Known issues / limitations
+## DO NOT REVIEW YET
 
 - 
 
-## Evidence index
+## EVIDENCE INDEX
 
 - Storyboard:
 - Contact sheet:
@@ -43,19 +97,20 @@
 - Video:
 - Before/after:
 - Diagnostics:
+- Trace if applicable:
 - Evidence manifest:
 
-## Critic verdict
+## CRITIC VERDICT
 
 - KEEP / ADJUST / REJECT / PENDING
 - Critic file:
 - Key issues:
 
-## Decisions needed from Juanma
+## DECISIONS NEEDED FROM JUANMA
 
 - 
 
-## Human verdict
+## HUMAN VERDICT RECORD
 
-- APPROVED / ADJUST / REJECTED / PENDING
+- KEEP / ADJUST / REJECT / PENDING
 - Notes:
