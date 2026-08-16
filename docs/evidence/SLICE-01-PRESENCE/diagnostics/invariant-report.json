@@ -1,0 +1,45 @@
+{
+  "ok": true,
+  "checks": [
+    {
+      "id": "THREE-RUNTIME-READY",
+      "pass": true,
+      "detail": "Three renderer mounted."
+    },
+    {
+      "id": "GROUNDING-PROBE",
+      "pass": true,
+      "detail": "floor.wood.b"
+    },
+    {
+      "id": "COLLISION-OBSERVED",
+      "pass": true,
+      "detail": "hits=378, correction=0.036"
+    },
+    {
+      "id": "VISITOR-MOTION-TELEMETRY",
+      "pass": true,
+      "detail": "speed=1.38"
+    },
+    {
+      "id": "BODY-ORIENTATION",
+      "pass": true,
+      "detail": "bodyYaw=19.73"
+    },
+    {
+      "id": "FOOT-CONTACT-LR",
+      "pass": true,
+      "detail": "events=8"
+    },
+    {
+      "id": "SURFACE-PROBE",
+      "pass": true,
+      "detail": "wood"
+    },
+    {
+      "id": "CAMERA-AUTHORITY",
+      "pass": true,
+      "detail": "PRESENCE_THIRD_PERSON, writes=1"
+    }
+  ]
+}

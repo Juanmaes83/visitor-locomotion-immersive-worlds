@@ -1,0 +1,684 @@
+{
+  "tool": "Microsoft Edge headless via Chrome DevTools Protocol",
+  "browser": "C:\\Program Files (x86)\\Microsoft\\Edge\\Application\\msedge.exe",
+  "appUrl": "http://127.0.0.1:4173",
+  "desktop": {
+    "mission": "SLICE-01-PRESENCE",
+    "baseline": "b9cc2c2d781684f1fc81aeedaf02de93af9e16b6",
+    "updateOrder": [
+      "input.beginFrame",
+      "runtime.fixedUpdate",
+      "worldState.update",
+      "visitorPresence.update",
+      "proximity.update",
+      "cameraAuthority.update",
+      "telemetry.sample",
+      "threeRenderer.render",
+      "input.endFrame"
+    ],
+    "averageFps": 60,
+    "averageFrameMs": 16.67,
+    "latest": {
+      "frame": 664,
+      "fps": 60,
+      "frameMs": 16.7,
+      "fixedSteps": 1,
+      "visitor": {
+        "position": {
+          "x": 2.8600000000000003,
+          "y": 0,
+          "z": -0.8366939786352138
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": -2.573352172496075
+        },
+        "yaw": 21.758513760512088,
+        "bodyYaw": 21.98025183079932,
+        "grounded": true,
+        "locomotionMode": "walk",
+        "currentSpaceId": "gallery-b",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "nearestHotspotId": null,
+        "surface": {
+          "surfaceId": "floor.wood.b",
+          "surfaceType": "wood",
+          "height": 0,
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          }
+        },
+        "footContacts": [
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": -0.625424907754958,
+              "y": 0.03,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2116.699999988079
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 0.2137407480376714,
+              "y": 0.03,
+              "z": 0.86
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2432.900000035763
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 1.0970740185164676,
+              "y": 0.03,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2783.699999988079
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 2.112907348437792,
+              "y": 0,
+              "z": 0.86
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 3166.199999988079
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 2.952074014990824,
+              "y": 0,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 3483.199999988079
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 2.838509255663997,
+              "y": 0,
+              "z": 0.4406350779296757
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 1.389,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 9749.400000035763
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 2.711397851433444,
+              "y": 0,
+              "z": 0.8871159598770765
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 1.384,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 10366.699999988079
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 3.035896240526746,
+              "y": 0,
+              "z": -0.09685566580780315
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 2.493,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 10816
+          }
+        ],
+        "collisionHit": true,
+        "collisionObserved": true,
+        "collisionHitCount": 358,
+        "maxCollisionCorrection": 0.036240681656471985,
+        "speed": 2.573352172496075
+      },
+      "camera": {
+        "owner": "PRESENCE_THIRD_PERSON",
+        "frame": 664,
+        "writesThisFrame": 1,
+        "violations": 0,
+        "recentViolations": [],
+        "history": [],
+        "pose": {
+          "position": {
+            "x": 2.363072781517957,
+            "y": 2.650000000000002,
+            "z": 4.6050769768091735
+          },
+          "target": {
+            "x": 2.858202729368784,
+            "y": 1.0500000000000007,
+            "z": -0.5588288893245508
+          },
+          "yaw": 21.98025183079932,
+          "pitch": -0.32,
+          "fov": 52
+        }
+      },
+      "footContactCount": 8,
+      "lastFootContact": {
+        "foot": "left",
+        "worldPosition": {
+          "x": 3.035896240526746,
+          "y": 0,
+          "z": -0.09685566580780315
+        },
+        "surfaceId": "floor.wood.b",
+        "surfaceType": "wood",
+        "speed": 2.493,
+        "stride": 0.86,
+        "locomotionMode": "walk",
+        "timestamp": 10816
+      },
+      "invariants": {
+        "ok": true,
+        "checks": [
+          {
+            "id": "THREE-RUNTIME-READY",
+            "pass": true,
+            "detail": "Three renderer mounted."
+          },
+          {
+            "id": "GROUNDING-PROBE",
+            "pass": true,
+            "detail": "floor.wood.b"
+          },
+          {
+            "id": "COLLISION-OBSERVED",
+            "pass": true,
+            "detail": "hits=358, correction=0.036"
+          },
+          {
+            "id": "VISITOR-MOTION-TELEMETRY",
+            "pass": true,
+            "detail": "speed=2.57"
+          },
+          {
+            "id": "BODY-ORIENTATION",
+            "pass": true,
+            "detail": "bodyYaw=21.98"
+          },
+          {
+            "id": "FOOT-CONTACT-LR",
+            "pass": true,
+            "detail": "events=8"
+          },
+          {
+            "id": "SURFACE-PROBE",
+            "pass": true,
+            "detail": "wood"
+          },
+          {
+            "id": "CAMERA-AUTHORITY",
+            "pass": true,
+            "detail": "PRESENCE_THIRD_PERSON, writes=1"
+          }
+        ]
+      }
+    },
+    "camera": {
+      "owner": "PRESENCE_THIRD_PERSON",
+      "frame": 664,
+      "writesThisFrame": 1,
+      "violations": 0,
+      "recentViolations": [],
+      "history": [],
+      "pose": {
+        "position": {
+          "x": 2.363072781517957,
+          "y": 2.650000000000002,
+          "z": 4.6050769768091735
+        },
+        "target": {
+          "x": 2.858202729368784,
+          "y": 1.0500000000000007,
+          "z": -0.5588288893245508
+        },
+        "yaw": 21.98025183079932,
+        "pitch": -0.32,
+        "fov": 52
+      }
+    },
+    "ownership": [
+      {
+        "mutableState": "visitor position/velocity/yaw",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "grounded/surface/foot contacts/body response",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "camera transform",
+        "owner": "CameraAuthority",
+        "sourceOfTruth": "CameraAuthority token commit"
+      },
+      {
+        "mutableState": "activeSpaceId/focus/route fields",
+        "owner": "WorldState",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "nearest hotspot",
+        "owner": "ProximitySystem",
+        "sourceOfTruth": "ProximitySystem"
+      }
+    ]
+  },
+  "mobile": {
+    "mission": "SLICE-01-PRESENCE",
+    "baseline": "b9cc2c2d781684f1fc81aeedaf02de93af9e16b6",
+    "updateOrder": [
+      "input.beginFrame",
+      "runtime.fixedUpdate",
+      "worldState.update",
+      "visitorPresence.update",
+      "proximity.update",
+      "cameraAuthority.update",
+      "telemetry.sample",
+      "threeRenderer.render",
+      "input.endFrame"
+    ],
+    "averageFps": 58,
+    "averageFrameMs": 16.67,
+    "latest": {
+      "frame": 37,
+      "fps": 60,
+      "frameMs": 16.7,
+      "fixedSteps": 2,
+      "visitor": {
+        "position": {
+          "x": -4.2,
+          "y": 0,
+          "z": 0.7
+        },
+        "velocity": {
+          "x": 0,
+          "y": 0,
+          "z": 0
+        },
+        "yaw": 1.5707963267948966,
+        "bodyYaw": 1.5707963267948966,
+        "grounded": true,
+        "locomotionMode": "idle",
+        "currentSpaceId": "gallery-a",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "nearestHotspotId": null,
+        "surface": {
+          "surfaceId": "floor.marble.a",
+          "surfaceType": "marble",
+          "height": 0,
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          }
+        },
+        "footContacts": [],
+        "collisionHit": false,
+        "collisionObserved": false,
+        "collisionHitCount": 0,
+        "maxCollisionCorrection": 0,
+        "speed": 0
+      },
+      "camera": {
+        "owner": "PRESENCE_THIRD_PERSON",
+        "frame": 37,
+        "writesThisFrame": 1,
+        "violations": 0,
+        "recentViolations": [],
+        "history": [],
+        "pose": {
+          "position": {
+            "x": -9.05805495173,
+            "y": 2.6486018317243327,
+            "z": 0.6999999999999998
+          },
+          "target": {
+            "x": -4.2,
+            "y": 1.05,
+            "z": 0.7
+          },
+          "yaw": 1.5707963267948966,
+          "pitch": -0.32,
+          "fov": 52
+        }
+      },
+      "footContactCount": 0,
+      "lastFootContact": null,
+      "invariants": {
+        "ok": true,
+        "checks": [
+          {
+            "id": "THREE-RUNTIME-READY",
+            "pass": true,
+            "detail": "Three renderer mounted."
+          },
+          {
+            "id": "GROUNDING-PROBE",
+            "pass": true,
+            "detail": "floor.marble.a"
+          },
+          {
+            "id": "COLLISION-OBSERVED",
+            "pass": true,
+            "detail": "ready; awaiting collision route"
+          },
+          {
+            "id": "VISITOR-MOTION-TELEMETRY",
+            "pass": true,
+            "detail": "speed=0.00"
+          },
+          {
+            "id": "BODY-ORIENTATION",
+            "pass": true,
+            "detail": "bodyYaw=1.57"
+          },
+          {
+            "id": "FOOT-CONTACT-LR",
+            "pass": true,
+            "detail": "ready; awaiting movement"
+          },
+          {
+            "id": "SURFACE-PROBE",
+            "pass": true,
+            "detail": "marble"
+          },
+          {
+            "id": "CAMERA-AUTHORITY",
+            "pass": true,
+            "detail": "PRESENCE_THIRD_PERSON, writes=1"
+          }
+        ]
+      }
+    },
+    "camera": {
+      "owner": "PRESENCE_THIRD_PERSON",
+      "frame": 37,
+      "writesThisFrame": 1,
+      "violations": 0,
+      "recentViolations": [],
+      "history": [],
+      "pose": {
+        "position": {
+          "x": -9.05805495173,
+          "y": 2.6486018317243327,
+          "z": 0.6999999999999998
+        },
+        "target": {
+          "x": -4.2,
+          "y": 1.05,
+          "z": 0.7
+        },
+        "yaw": 1.5707963267948966,
+        "pitch": -0.32,
+        "fov": 52
+      }
+    },
+    "ownership": [
+      {
+        "mutableState": "visitor position/velocity/yaw",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "grounded/surface/foot contacts/body response",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "camera transform",
+        "owner": "CameraAuthority",
+        "sourceOfTruth": "CameraAuthority token commit"
+      },
+      {
+        "mutableState": "activeSpaceId/focus/route fields",
+        "owner": "WorldState",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "nearest hotspot",
+        "owner": "ProximitySystem",
+        "sourceOfTruth": "ProximitySystem"
+      }
+    ]
+  },
+  "canvasPixels": {
+    "desktopInitial": {
+      "width": 1416,
+      "height": 808,
+      "unique": 3,
+      "nonBlank": true,
+      "samples": [
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          137,
+          126,
+          106,
+          255
+        ],
+        [
+          16,
+          24,
+          22,
+          255
+        ],
+        [
+          137,
+          126,
+          106,
+          255
+        ],
+        [
+          16,
+          24,
+          22,
+          255
+        ]
+      ]
+    },
+    "desktopFinal": {
+      "width": 1416,
+      "height": 808,
+      "unique": 6,
+      "nonBlank": true,
+      "samples": [
+        [
+          180,
+          166,
+          140,
+          255
+        ],
+        [
+          152,
+          140,
+          116,
+          255
+        ],
+        [
+          152,
+          140,
+          116,
+          255
+        ],
+        [
+          96,
+          91,
+          77,
+          255
+        ],
+        [
+          167,
+          72,
+          37,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          16,
+          24,
+          22,
+          255
+        ],
+        [
+          16,
+          24,
+          22,
+          255
+        ],
+        [
+          16,
+          24,
+          22,
+          255
+        ]
+      ]
+    },
+    "mobile": {
+      "width": 390,
+      "height": 844,
+      "unique": 3,
+      "nonBlank": true,
+      "samples": [
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          136,
+          126,
+          105,
+          255
+        ],
+        [
+          137,
+          126,
+          106,
+          255
+        ],
+        [
+          137,
+          126,
+          106,
+          255
+        ],
+        [
+          137,
+          127,
+          106,
+          255
+        ]
+      ]
+    }
+  },
+  "video": {
+    "frames": 250,
+    "encoded": true
+  },
+  "consoleErrors": []
+}

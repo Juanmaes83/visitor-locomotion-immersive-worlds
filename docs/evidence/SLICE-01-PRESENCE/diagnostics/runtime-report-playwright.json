@@ -1,0 +1,311 @@
+{
+  "tool": "Playwright",
+  "source": "C:\\Users\\temp123\\Documents\\ChatGPT\\sakura-crossing\\sakura-crossing-source\\node_modules\\playwright\\index.mjs",
+  "consoleErrors": [],
+  "report": {
+    "mission": "SLICE-01-PRESENCE",
+    "baseline": "b9cc2c2d781684f1fc81aeedaf02de93af9e16b6",
+    "updateOrder": [
+      "input.beginFrame",
+      "runtime.fixedUpdate",
+      "worldState.update",
+      "visitorPresence.update",
+      "proximity.update",
+      "cameraAuthority.update",
+      "telemetry.sample",
+      "threeRenderer.render",
+      "input.endFrame"
+    ],
+    "averageFps": 53,
+    "averageFrameMs": 20.74,
+    "latest": {
+      "frame": 546,
+      "fps": 60,
+      "frameMs": 16.7,
+      "fixedSteps": 1,
+      "visitor": {
+        "position": {
+          "x": 2.7533800773590644,
+          "y": 0,
+          "z": 0.6927104438951392
+        },
+        "velocity": {
+          "x": 0.9670287247396394,
+          "y": 0,
+          "z": -0.9897940704750066
+        },
+        "yaw": 21.037523852165045,
+        "bodyYaw": 19.732350160090707,
+        "grounded": true,
+        "locomotionMode": "walk",
+        "currentSpaceId": "gallery-b",
+        "focusedEntityId": null,
+        "activeRouteId": null,
+        "activeStepId": null,
+        "nearestHotspotId": null,
+        "surface": {
+          "surfaceId": "floor.wood.b",
+          "surfaceType": "wood",
+          "height": 0,
+          "normal": {
+            "x": 0,
+            "y": 1,
+            "z": 0
+          }
+        },
+        "footContacts": [
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": -1.5087390764305275,
+              "y": 0,
+              "z": 0.86
+            },
+            "surfaceId": "floor.marble.a",
+            "surfaceType": "marble",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 1859.5
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": -0.625424907754958,
+              "y": 0.03,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2197
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 0.2137407480376714,
+              "y": 0.03,
+              "z": 0.86
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2520.7000000476837
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 1.0970740185164676,
+              "y": 0.03,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.stone.doorway",
+            "surfaceType": "stone",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 2858.400000035763
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 2.112907348437792,
+              "y": 0,
+              "z": 0.86
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 3233
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 2.952074014990824,
+              "y": 0,
+              "z": 0.5399999999999999
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 2.65,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 3554.5
+          },
+          {
+            "foot": "left",
+            "worldPosition": {
+              "x": 2.838509255663997,
+              "y": 0,
+              "z": 0.4406350779296757
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 1.389,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 10611.200000047684
+          },
+          {
+            "foot": "right",
+            "worldPosition": {
+              "x": 2.711397851433444,
+              "y": 0,
+              "z": 0.8871159598770765
+            },
+            "surfaceId": "floor.wood.b",
+            "surfaceType": "wood",
+            "speed": 1.384,
+            "stride": 0.86,
+            "locomotionMode": "walk",
+            "timestamp": 11238
+          }
+        ],
+        "collisionHit": false,
+        "collisionObserved": true,
+        "collisionHitCount": 378,
+        "maxCollisionCorrection": 0.036240681656471985,
+        "speed": 1.3837763028824623
+      },
+      "camera": {
+        "owner": "PRESENCE_THIRD_PERSON",
+        "frame": 546,
+        "writesThisFrame": 1,
+        "violations": 0,
+        "recentViolations": [],
+        "history": [],
+        "pose": {
+          "position": {
+            "x": 2.9623893738259772,
+            "y": 2.650000000000001,
+            "z": -1.2972456373131518
+          },
+          "target": {
+            "x": 2.6785025366414987,
+            "y": 1.0500000000000005,
+            "z": 0.6846823028921752
+          },
+          "yaw": 19.732350160090707,
+          "pitch": -0.32,
+          "fov": 52
+        }
+      },
+      "footContactCount": 8,
+      "lastFootContact": {
+        "foot": "right",
+        "worldPosition": {
+          "x": 2.711397851433444,
+          "y": 0,
+          "z": 0.8871159598770765
+        },
+        "surfaceId": "floor.wood.b",
+        "surfaceType": "wood",
+        "speed": 1.384,
+        "stride": 0.86,
+        "locomotionMode": "walk",
+        "timestamp": 11238
+      },
+      "invariants": {
+        "ok": true,
+        "checks": [
+          {
+            "id": "THREE-RUNTIME-READY",
+            "pass": true,
+            "detail": "Three renderer mounted."
+          },
+          {
+            "id": "GROUNDING-PROBE",
+            "pass": true,
+            "detail": "floor.wood.b"
+          },
+          {
+            "id": "COLLISION-OBSERVED",
+            "pass": true,
+            "detail": "hits=378, correction=0.036"
+          },
+          {
+            "id": "VISITOR-MOTION-TELEMETRY",
+            "pass": true,
+            "detail": "speed=1.38"
+          },
+          {
+            "id": "BODY-ORIENTATION",
+            "pass": true,
+            "detail": "bodyYaw=19.73"
+          },
+          {
+            "id": "FOOT-CONTACT-LR",
+            "pass": true,
+            "detail": "events=8"
+          },
+          {
+            "id": "SURFACE-PROBE",
+            "pass": true,
+            "detail": "wood"
+          },
+          {
+            "id": "CAMERA-AUTHORITY",
+            "pass": true,
+            "detail": "PRESENCE_THIRD_PERSON, writes=1"
+          }
+        ]
+      }
+    },
+    "camera": {
+      "owner": "PRESENCE_THIRD_PERSON",
+      "frame": 546,
+      "writesThisFrame": 1,
+      "violations": 0,
+      "recentViolations": [],
+      "history": [],
+      "pose": {
+        "position": {
+          "x": 2.9623893738259772,
+          "y": 2.650000000000001,
+          "z": -1.2972456373131518
+        },
+        "target": {
+          "x": 2.6785025366414987,
+          "y": 1.0500000000000005,
+          "z": 0.6846823028921752
+        },
+        "yaw": 19.732350160090707,
+        "pitch": -0.32,
+        "fov": 52
+      }
+    },
+    "ownership": [
+      {
+        "mutableState": "visitor position/velocity/yaw",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "grounded/surface/foot contacts/body response",
+        "owner": "VisitorPresenceRuntime",
+        "sourceOfTruth": "VisitorPresenceRuntime"
+      },
+      {
+        "mutableState": "camera transform",
+        "owner": "CameraAuthority",
+        "sourceOfTruth": "CameraAuthority token commit"
+      },
+      {
+        "mutableState": "activeSpaceId/focus/route fields",
+        "owner": "WorldState",
+        "sourceOfTruth": "WorldState"
+      },
+      {
+        "mutableState": "nearest hotspot",
+        "owner": "ProximitySystem",
+        "sourceOfTruth": "ProximitySystem"
+      }
+    ]
+  }
+}
