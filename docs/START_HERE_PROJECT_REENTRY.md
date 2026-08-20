@@ -324,44 +324,17 @@ Do not assume:
 
 # 11. PROJECT-SPECIFIC REENTRY BLOCK
 
-When this master template is copied into a project, fill in this section and keep the universal doctrine above intact unless an ecosystem-wide decision formally changes it.
-
 ```text
-PROJECT NAME:
-
-PROJECT PURPOSE / DNA:
-
-MOTHER / BASE RUNTIME:
-
-CURRENT PRIORITY:
-
-CURRENT ACTIVE PHASE:
-
-BRAIN — local authority/capabilities:
-
-SKELETON — local authority/capabilities:
-
-SKIN — current status:
-
-CURRENT SKIN CLASSIFICATION:
-[ ] final-approved
-[ ] candidate-final
-[ ] provisional
-[ ] blockout/proxy
-
-LOCAL CANONICAL START_HERE:
-
-LOCAL ACTIVE ROADMAP:
-
-LOCAL ACTIVE EXECUTION LOG:
-
-FROZEN / VALIDATED DONORS:
-
-KNOWN SKIN-COUPLING DEBT:
-
-DO NOT REOPEN / DO NOT TOUCH:
-
-NEXT VALIDATION GATE:
+PROJECT NAME: Visitor Locomotion / Immersive Worlds
+PROJECT PURPOSE / DNA: isolated R&D home for the Immersive Worlds Visitor Presence Engine workstream.
+MOTHER / BASE RUNTIME: this repository is the R&D home; production worlds remain separate mothers.
+CURRENT PRIORITY: engine/skeleton research only; locomotion, presence, authority and compatibility before visual polish.
+CURRENT ACTIVE PHASE: repository bootstrap / isolated R&D unless a newer branch authority explicitly supersedes it.
+CURRENT SKIN CLASSIFICATION: not a skin-led project; visuals are test/reference surfaces only unless explicitly promoted.
+LOCAL CANONICAL START_HERE: README.md and the operating Playbook/project memory referenced there.
+LOCAL ACTIVE ROADMAP: VERIFY ON REENTRY; no production implementation is authorized from main by the README.
+DO NOT REOPEN / DO NOT TOUCH: Museum, Sakura, Central District and Escaparates donors are read-only unless explicitly authorized; no production work directly from main.
+NEXT VALIDATION GATE: isolated branch/local proof of any locomotion capability before integration into a production world.
 ```
 
 Keep this block concise. It is a reentry snapshot, not a second roadmap.
